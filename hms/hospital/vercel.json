@@ -1,0 +1,19 @@
+{
+  "version": 2,  // Specify Vercel configuration version
+  "builds": [
+    {
+      "src": "hospital/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "hospital/wsgi.py"
+    }
+  ],
+  "env": { // Optional: Add any environment variables your app needs
+    "DJANGO_SETTINGS_MODULE": "hospital.settings", // Adjust if your settings module is different
+    "OTHER_ENV_VAR": "value" // Replace with your other environment variables if any
+  }
+}
