@@ -8,11 +8,9 @@ https://docs.djangoproject.com/en/5.0/howto/deployment/wsgi/
 """
 
 import os
-
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'docappsystem.settings')
+# Ensure this points to your settings module
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'hospital.docappsystem.settings')  # Adjusted to reflect the path
 
 application = get_wsgi_application()
-
-app = application

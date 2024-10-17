@@ -6,7 +6,8 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'docappsystem.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'hospital.docappsystem.settings')  # Adjusted to reflect the path
+
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
